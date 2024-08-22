@@ -1,0 +1,1292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2a3d19df-7ae7-4c53-9b38-21af964315dd}</ProjectGuid>
+    <RootNamespace>TFDCG</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;TFDCG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;TFDCG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;TFDCG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;TFDCG_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Cheat.hpp" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="IDE_Helper.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cheat.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SDK\Ability.cpp" />
+    <ClCompile Include="SDK\AbilityFunctionLibrary.cpp" />
+    <ClCompile Include="SDK\Ability_0HV_M.cpp" />
+    <ClCompile Include="SDK\Ability_0LT_F.cpp" />
+    <ClCompile Include="SDK\Ability_0LT_M.cpp" />
+    <ClCompile Include="SDK\Ability_2HV_F.cpp" />
+    <ClCompile Include="SDK\Ability_2HV_M.cpp" />
+    <ClCompile Include="SDK\Ability_2LT_F.cpp" />
+    <ClCompile Include="SDK\Ability_2LT_M.cpp" />
+    <ClCompile Include="SDK\Ability_Debone.cpp" />
+    <ClCompile Include="SDK\Ability_ElementalDamage.cpp" />
+    <ClCompile Include="SDK\Ability_FieldInteractable_Explosion.cpp" />
+    <ClCompile Include="SDK\Ability_MissionTarget_Immune.cpp" />
+    <ClCompile Include="SDK\Ability_PlayerHitReaction.cpp" />
+    <ClCompile Include="SDK\Ability_PlayerJump.cpp" />
+    <ClCompile Include="SDK\Ability_PlayerReviveWatcher.cpp" />
+    <ClCompile Include="SDK\ACLPlugin.cpp" />
+    <ClCompile Include="SDK\ActorLayerUtilities.cpp" />
+    <ClCompile Include="SDK\ActorSequence.cpp" />
+    <ClCompile Include="SDK\AdvancedWidgets.cpp" />
+    <ClCompile Include="SDK\AIModule.cpp" />
+    <ClCompile Include="SDK\AkAmbienceMultiple.cpp" />
+    <ClCompile Include="SDK\AkAudio.cpp" />
+    <ClCompile Include="SDK\AkEnvZoneType.cpp" />
+    <ClCompile Include="SDK\AK_Dialog_Component.cpp" />
+    <ClCompile Include="SDK\AK_FootStepNotify.cpp" />
+    <ClCompile Include="SDK\AmbientObjectType.cpp" />
+    <ClCompile Include="SDK\Amb_Space.cpp" />
+    <ClCompile Include="SDK\AnimationBudgetAllocator.cpp" />
+    <ClCompile Include="SDK\AnimationCore.cpp" />
+    <ClCompile Include="SDK\AnimationSharing.cpp" />
+    <ClCompile Include="SDK\AnimationWarpingRuntime.cpp" />
+    <ClCompile Include="SDK\AnimBP_CampSimple.cpp" />
+    <ClCompile Include="SDK\AnimBP_CampTank.cpp" />
+    <ClCompile Include="SDK\AnimBP_CampTank_Cannon.cpp" />
+    <ClCompile Include="SDK\AnimBP_CampTank_Core.cpp" />
+    <ClCompile Include="SDK\AnimBP_INTER_CodedVault.cpp" />
+    <ClCompile Include="SDK\AnimBP_INTER_MilitarySupplies.cpp" />
+    <ClCompile Include="SDK\AnimBP_INTER_VulgusBox.cpp" />
+    <ClCompile Include="SDK\AnimBP_INTER_VulgusShells.cpp" />
+    <ClCompile Include="SDK\AnimBP_MIS_AlbionBattleDataArchive.cpp" />
+    <ClCompile Include="SDK\AnimBP_MIS_AlbionBattleDataDisc.cpp" />
+    <ClCompile Include="SDK\AnimBP_MIS_VoidFragment_Poison.cpp" />
+    <ClCompile Include="SDK\AnimBP_MIS_VulgusDataDevice.cpp" />
+    <ClCompile Include="SDK\AnimBP_MIS_VulgusPerturber.cpp" />
+    <ClCompile Include="SDK\AnimBP_NpcBase.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_002_MissionVeacon.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_009_Jeffer_Barricade01A.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_009_Jeffer_Barricade01B.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_009_Jeffer_Checkpoint.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_009_Jeffer_Idle.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_015_Guide_Analyst.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_032_Transportstorage.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_033_Workbench.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_034_TextJournal.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_035_VoiceJournal.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_040_CombatSupportDroid.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_048_No17.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_Dialog.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_Enzo_Operate.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_Enzo_Wisdom.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_Esiemo.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_Esiemo_Operate.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_Facial.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_FullBody.cpp" />
+    <ClCompile Include="SDK\AnimBP_NPC_LookAt.cpp" />
+    <ClCompile Include="SDK\AnimBP_VoidVaultStabilizer.cpp" />
+    <ClCompile Include="SDK\AnimGraphRuntime.cpp" />
+    <ClCompile Include="SDK\animlayer_Player_Ability.cpp" />
+    <ClCompile Include="SDK\animlayer_Player_Locomotion.cpp" />
+    <ClCompile Include="SDK\animlayer_Player_Slot.cpp" />
+    <ClCompile Include="SDK\animlayer_Player_Specification.cpp" />
+    <ClCompile Include="SDK\animlayer_Player_UpperBody.cpp" />
+    <ClCompile Include="SDK\animlayer_Player_Wire.cpp" />
+    <ClCompile Include="SDK\AnimnotifyOption.cpp" />
+    <ClCompile Include="SDK\AnimNotify_DynamicDialogue.cpp" />
+    <ClCompile Include="SDK\AnimNotify_PC_AnimAkEvent.cpp" />
+    <ClCompile Include="SDK\AnimToTexture.cpp" />
+    <ClCompile Include="SDK\ApexDestruction.cpp" />
+    <ClCompile Include="SDK\AppleARKit.cpp" />
+    <ClCompile Include="SDK\AppleARKitFaceSupport.cpp" />
+    <ClCompile Include="SDK\AppleARKitPoseTrackingLiveLink.cpp" />
+    <ClCompile Include="SDK\AppleImageUtils.cpp" />
+    <ClCompile Include="SDK\ArchVisCharacter.cpp" />
+    <ClCompile Include="SDK\ARUtilities.cpp" />
+    <ClCompile Include="SDK\AssetRegistry.cpp" />
+    <ClCompile Include="SDK\AssetTags.cpp" />
+    <ClCompile Include="SDK\ATKBased.cpp" />
+    <ClCompile Include="SDK\AudioAnalyzer.cpp" />
+    <ClCompile Include="SDK\AudioCapture.cpp" />
+    <ClCompile Include="SDK\AudioExtensions.cpp" />
+    <ClCompile Include="SDK\AudioLinkCore.cpp" />
+    <ClCompile Include="SDK\AudioLinkEngine.cpp" />
+    <ClCompile Include="SDK\AudioMixer.cpp" />
+    <ClCompile Include="SDK\AudioPlatformConfiguration.cpp" />
+    <ClCompile Include="SDK\AudioSynesthesia.cpp" />
+    <ClCompile Include="SDK\AudioWidgets.cpp" />
+    <ClCompile Include="SDK\AugmentedReality.cpp" />
+    <ClCompile Include="SDK\AutomationUtils.cpp" />
+    <ClCompile Include="SDK\AvfMediaFactory.cpp" />
+    <ClCompile Include="SDK\BasicTypes.cpp" />
+    <ClCompile Include="SDK\BinkMediaPlayer.cpp" />
+    <ClCompile Include="SDK\Bones.cpp" />
+    <ClCompile Include="SDK\BPFL_Crosshair.cpp" />
+    <ClCompile Include="SDK\BPI_EnvAudio.cpp" />
+    <ClCompile Include="SDK\BPL_MarkerLibrary.cpp" />
+    <ClCompile Include="SDK\BPL_Quest.cpp" />
+    <ClCompile Include="SDK\BPL_RuneBoard.cpp" />
+    <ClCompile Include="SDK\BPL_Runes.cpp" />
+    <ClCompile Include="SDK\BPL_UILibrary.cpp" />
+    <ClCompile Include="SDK\BP_ActionPermissionComponent.cpp" />
+    <ClCompile Include="SDK\BP_AKComponent.cpp" />
+    <ClCompile Include="SDK\BP_AK_Ambient_3D.cpp" />
+    <ClCompile Include="SDK\BP_AK_Env_SplineActor.cpp" />
+    <ClCompile Include="SDK\BP_Albani_ETC_BrokenBox00_YEY.cpp" />
+    <ClCompile Include="SDK\BP_Albani_ETC_BrokenBox01_YEY.cpp" />
+    <ClCompile Include="SDK\BP_Albani_LandMark00A1_YSH.cpp" />
+    <ClCompile Include="SDK\BP_Albani_LandMark00A_YSH.cpp" />
+    <ClCompile Include="SDK\BP_AlbionBarrierActivator.cpp" />
+    <ClCompile Include="SDK\BP_AmmoEnhancedDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_AmmoGeneralDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_AmmoHighpowerDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_AmmoImpactDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_AssetManager.cpp" />
+    <ClCompile Include="SDK\BP_AudioActorBase.cpp" />
+    <ClCompile Include="SDK\BP_AudioFL.cpp" />
+    <ClCompile Include="SDK\BP_AudioZoneBox.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_Cave.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_DryCave.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_Indoor.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_OutDoorAlley.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_OutDoorForestAlley.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_OutDoorSwamp.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_OutDoorValley.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_OutDoorWetland.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_StoneHall.cpp" />
+    <ClCompile Include="SDK\BP_AudioZone_Tunnel.cpp" />
+    <ClCompile Include="SDK\BP_BattlePassBackground.cpp" />
+    <ClCompile Include="SDK\BP_BlackBox.cpp" />
+    <ClCompile Include="SDK\BP_BlueprintClassRepGraphNodeMapping.cpp" />
+    <ClCompile Include="SDK\BP_BuffOrbDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_CampCoreGenerator01.cpp" />
+    <ClCompile Include="SDK\BP_CampSimple.cpp" />
+    <ClCompile Include="SDK\BP_CampTank.cpp" />
+    <ClCompile Include="SDK\BP_CharacterConveyer.cpp" />
+    <ClCompile Include="SDK\BP_CharacterPreviewInventory.cpp" />
+    <ClCompile Include="SDK\BP_CharacterPreviewStageInventory.cpp" />
+    <ClCompile Include="SDK\BP_CollectionObject_ImmortalSynthBrain.cpp" />
+    <ClCompile Include="SDK\BP_CollectionObject_MissionCollectibles.cpp" />
+    <ClCompile Include="SDK\BP_Cursor.cpp" />
+    <ClCompile Include="SDK\BP_DespawnMaterialManipulator.cpp" />
+    <ClCompile Include="SDK\BP_DroppedItemBase.cpp" />
+    <ClCompile Include="SDK\BP_EmberDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_EnergyEmitterDroppedWeapon.cpp" />
+    <ClCompile Include="SDK\BP_EquipTier01DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_EquipTier02DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_EquipTier03DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_Explosive_VulgusTinyEmpBomb_Type1.cpp" />
+    <ClCompile Include="SDK\BP_Explosive_VulgusTinyEmpBomb_Type2.cpp" />
+    <ClCompile Include="SDK\BP_FieldInteractableBase_Hit.cpp" />
+    <ClCompile Include="SDK\BP_FieldInteractableBase_Interaction.cpp" />
+    <ClCompile Include="SDK\BP_GameHUD.cpp" />
+    <ClCompile Include="SDK\BP_GameInstance.cpp" />
+    <ClCompile Include="SDK\BP_GlobalEnvManager.cpp" />
+    <ClCompile Include="SDK\BP_GoldDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_HealthOrbDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_InGameMode.cpp" />
+    <ClCompile Include="SDK\BP_INTER_CodedVault.cpp" />
+    <ClCompile Include="SDK\BP_INTER_CodedVault_Ultra.cpp" />
+    <ClCompile Include="SDK\BP_INTER_HintObject.cpp" />
+    <ClCompile Include="SDK\BP_INTER_MilitarySupplies.cpp" />
+    <ClCompile Include="SDK\BP_INTER_VulgusBox.cpp" />
+    <ClCompile Include="SDK\BP_INTER_VulgusShells.cpp" />
+    <ClCompile Include="SDK\BP_KuiperShardDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_Location.cpp" />
+    <ClCompile Include="SDK\BP_ManaOrbDroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_MapAxes.cpp" />
+    <ClCompile Include="SDK\BP_MissionActorBase.cpp" />
+    <ClCompile Include="SDK\BP_MissionActorDefault.cpp" />
+    <ClCompile Include="SDK\BP_MissionNpcMaterialManipulator.cpp" />
+    <ClCompile Include="SDK\BP_MissionSubTaskAssassination.cpp" />
+    <ClCompile Include="SDK\BP_MissionSubTaskCollectionReturn.cpp" />
+    <ClCompile Include="SDK\BP_MissionSubTaskDestruction.cpp" />
+    <ClCompile Include="SDK\BP_MissionSubTaskOccuaption.cpp" />
+    <ClCompile Include="SDK\BP_MissionSubTaskSteal.cpp" />
+    <ClCompile Include="SDK\BP_MissionTargetDataCollectionDeviceBase.cpp" />
+    <ClCompile Include="SDK\BP_MissionTargetDestructionBase.cpp" />
+    <ClCompile Include="SDK\BP_MissionTarget_AlbionBattleDataArchive.cpp" />
+    <ClCompile Include="SDK\BP_MissionTarget_AlbionBattleDataDisc.cpp" />
+    <ClCompile Include="SDK\BP_MissionTarget_VulgusPerturber.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskActorBundleSupply.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskAssassination.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskCollection.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskCompetitiveOccupation.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskContinuousSurvival.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskDataCollection.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskDefense.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskDestruction.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskDestructionIronHeart.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskDestructionVulgusPost.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskEscort.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskExplosion.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskExtermination.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskHacking.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskInteraction.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskMove.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskMultiAssassination.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskMultiCollection.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskOccupation.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskPathDisplayer.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskResearchBlock.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskSteal.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskSupply.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskVoidBattleBoss.cpp" />
+    <ClCompile Include="SDK\BP_MissionTaskWaveDefense.cpp" />
+    <ClCompile Include="SDK\BP_MIS_VoidFragment_Poison.cpp" />
+    <ClCompile Include="SDK\BP_MIS_VulgusDataDevice.cpp" />
+    <ClCompile Include="SDK\BP_NpcBase.cpp" />
+    <ClCompile Include="SDK\BP_PlayerControllerInGame.cpp" />
+    <ClCompile Include="SDK\BP_PlayerNpcBase.cpp" />
+    <ClCompile Include="SDK\BP_PrevieLevelCharacterSequence.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelBattlePassCharacter.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelBattlePassEtc.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelBattlePassSocial.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelBattlePassWeapon.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelBattlePassWire.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelCustomizeCharacter.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelCustomizeSkinPaint.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelCustomizeSocial.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelCustomizeWeapon.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelCustomizeWire.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelInventory.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelSelector.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelShopCharacter.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelShopEtc.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelShopSocial.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelShopWeapon.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelShopWire.cpp" />
+    <ClCompile Include="SDK\BP_PreviewLevelWeapon.cpp" />
+    <ClCompile Include="SDK\BP_PreviewTestGameMode.cpp" />
+    <ClCompile Include="SDK\BP_ResourceTier01DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_ResourceTier02DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_ResourceTier03DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_RuleBasedMonsterSpawner.cpp" />
+    <ClCompile Include="SDK\BP_RuneTier01DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_RuneTier02DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_RuneTier03DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_RuneTier04DroppedItem.cpp" />
+    <ClCompile Include="SDK\BP_Sec_NPC_002_A0101.cpp" />
+    <ClCompile Include="SDK\BP_Sec_NPC_009_A0101.cpp" />
+    <ClCompile Include="SDK\BP_Sec_NPC_015_A0101.cpp" />
+    <ClCompile Include="SDK\BP_Sec_NPC_032_A0101.cpp" />
+    <ClCompile Include="SDK\BP_Sec_NPC_033_A0101.cpp" />
+    <ClCompile Include="SDK\BP_Sec_NPC_034_A0101.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_004_A0101.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_004_A_VAR_BODY_000.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_004_A_VAR_HEAD_000.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_004_A_VAR_HEAD_1000.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_004_U_VAR_BODY_000.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_004_U_VAR_HEAD_000.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_012_A0101.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_012_A_VAR_BODY_000.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_012_A_VAR_HEAD_000.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_013_A0101.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_013_A_VAR_BODY_000.cpp" />
+    <ClCompile Include="SDK\BP_Sec_PC_013_A_VAR_HEAD_000.cpp" />
+    <ClCompile Include="SDK\BP_Sec_SK_Vulgus_Carrier_Truth.cpp" />
+    <ClCompile Include="SDK\BP_Sec_SK_Vulgus_Tunnel.cpp" />
+    <ClCompile Include="SDK\BP_Sec_Sub_Camp.cpp" />
+    <ClCompile Include="SDK\BP_ServerStreamingAreaActor.cpp" />
+    <ClCompile Include="SDK\BP_ShopBackground.cpp" />
+    <ClCompile Include="SDK\BP_SimpleTaskActor.cpp" />
+    <ClCompile Include="SDK\BP_SimpleTaskActorBase.cpp" />
+    <ClCompile Include="SDK\BP_SimpleTaskActor_Camp.cpp" />
+    <ClCompile Include="SDK\BP_SimpleTaskActor_ChangeCharacter.cpp" />
+    <ClCompile Include="SDK\BP_SimpleTaskActor_PatrolMonster.cpp" />
+    <ClCompile Include="SDK\BP_SimpleTaskActor_Portal.cpp" />
+    <ClCompile Include="SDK\BP_SpawnLocationEffect_NoMesh_Portal.cpp" />
+    <ClCompile Include="SDK\BP_SpawnLocationEffect_Portal_Common.cpp" />
+    <ClCompile Include="SDK\BP_SpawnLocationEffect_Shuttle_Truth.cpp" />
+    <ClCompile Include="SDK\BP_SpawnLocationSelector.cpp" />
+    <ClCompile Include="SDK\BP_SpawnMaterialManipulator.cpp" />
+    <ClCompile Include="SDK\BP_SpawnPoint_Npc.cpp" />
+    <ClCompile Include="SDK\BP_SpawnPoint_NpcMissionSelected.cpp" />
+    <ClCompile Include="SDK\BP_SplineBlocker.cpp" />
+    <ClCompile Include="SDK\BP_SprayPalette.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_SlimeCarrier.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_VulgusModule.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_VulgusResourceBox_Type1.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_VulgusResourceBox_Type2.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_VulgusSupplyGreaterBox_Type1.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_VulgusSupplyGreaterBox_Type2.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_VulgusSupplyLesserBox_Type1.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_VulgusSupplyLesserBox_Type2.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_VulgusSupplyMidiumBox_Type1.cpp" />
+    <ClCompile Include="SDK\BP_SupplyObject_VulgusSupplyMidiumBox_Type2.cpp" />
+    <ClCompile Include="SDK\BP_TaskEvent.cpp" />
+    <ClCompile Include="SDK\BP_TaskEvent_Camp.cpp" />
+    <ClCompile Include="SDK\BP_TaskSelector_VoidSkipShpereSeq.cpp" />
+    <ClCompile Include="SDK\BP_VoidVaultStabilizer.cpp" />
+    <ClCompile Include="SDK\BP_Vulgus_AnchorStone_MoveBox01_PCS.cpp" />
+    <ClCompile Include="SDK\BP_Vulgus_AnchorStone_TopCore.cpp" />
+    <ClCompile Include="SDK\BP_WaterFall_002.cpp" />
+    <ClCompile Include="SDK\BP_WeaponPreview.cpp" />
+    <ClCompile Include="SDK\BP_WeaponPreviewStage.cpp" />
+    <ClCompile Include="SDK\BuildPatchServices.cpp" />
+    <ClCompile Include="SDK\Bunny.cpp" />
+    <ClCompile Include="SDK\BunnyBeamLevelData.cpp" />
+    <ClCompile Include="SDK\BunnyCommonGauge.cpp" />
+    <ClCompile Include="SDK\BunnyGaugeDeltaApplyPolicy.cpp" />
+    <ClCompile Include="SDK\CableComponent.cpp" />
+    <ClCompile Include="SDK\CalcAjaxRune02Damage.cpp" />
+    <ClCompile Include="SDK\CalcAjaxRune05ReflectDamage.cpp" />
+    <ClCompile Include="SDK\CalcATKBaseSkillRecovery.cpp" />
+    <ClCompile Include="SDK\CalcBunnyRune04SkillCost.cpp" />
+    <ClCompile Include="SDK\CalcCommonRecovery.cpp" />
+    <ClCompile Include="SDK\CalcDamageBase.cpp" />
+    <ClCompile Include="SDK\CalcDamageFieldObject.cpp" />
+    <ClCompile Include="SDK\CalcElementalDotDamage.cpp" />
+    <ClCompile Include="SDK\CalcElementalStackableDotDamage.cpp" />
+    <ClCompile Include="SDK\CalcEnergyShieldCost.cpp" />
+    <ClCompile Include="SDK\CalcEpicMonsterUpdateStats.cpp" />
+    <ClCompile Include="SDK\CalcEtcBase.cpp" />
+    <ClCompile Include="SDK\CalcFreynaPassiveDamage.cpp" />
+    <ClCompile Include="SDK\CalcGleyNosferatuDamage.cpp" />
+    <ClCompile Include="SDK\CalcGleyRecovery.cpp" />
+    <ClCompile Include="SDK\CalcGluttonySEStackRecovery.cpp" />
+    <ClCompile Include="SDK\CalcHaileyUltraColdDamage.cpp" />
+    <ClCompile Include="SDK\CalcInstantDeathDamage.cpp" />
+    <ClCompile Include="SDK\CalcKyleDamage.cpp" />
+    <ClCompile Include="SDK\CalcMaxHPRatioDamage.cpp" />
+    <ClCompile Include="SDK\CalcMaxStatBaseRecovery.cpp" />
+    <ClCompile Include="SDK\CalcMpRatioRecovery.cpp" />
+    <ClCompile Include="SDK\CalcPerkExcavaDamage.cpp" />
+    <ClCompile Include="SDK\CalcRecoveryBase.cpp" />
+    <ClCompile Include="SDK\CalcSharenRune02Cost.cpp" />
+    <ClCompile Include="SDK\CalcShieldBaseDamage.cpp" />
+    <ClCompile Include="SDK\CalcShieldInitializeStats.cpp" />
+    <ClCompile Include="SDK\CalcShieldReflectDamage.cpp" />
+    <ClCompile Include="SDK\CalcSkillCost.cpp" />
+    <ClCompile Include="SDK\CalcSkillCostToZero.cpp" />
+    <ClCompile Include="SDK\CalcSkillDamage.cpp" />
+    <ClCompile Include="SDK\CalcSkillDamageBunnyActive4.cpp" />
+    <ClCompile Include="SDK\CalcSkillDamageMonster_New.cpp" />
+    <ClCompile Include="SDK\CalcSkillDamageMonster_New_InvasionMissionOnly.cpp" />
+    <ClCompile Include="SDK\CalcSkillDamagePC.cpp" />
+    <ClCompile Include="SDK\CalcSkillDamagePC_Bunny.cpp" />
+    <ClCompile Include="SDK\CalcSkillDamagePC_New.cpp" />
+    <ClCompile Include="SDK\CalcSkillElementalDotDamageMonster.cpp" />
+    <ClCompile Include="SDK\CalcSkillElementalStackableDotDamageMonster.cpp" />
+    <ClCompile Include="SDK\CalcSkillRecoveryHpAndShield.cpp" />
+    <ClCompile Include="SDK\CalcStatIncreaseByDamage.cpp" />
+    <ClCompile Include="SDK\CalcSubSkillDamage.cpp" />
+    <ClCompile Include="SDK\CalcTargetHPRatioDamage.cpp" />
+    <ClCompile Include="SDK\CalcValueDamage.cpp" />
+    <ClCompile Include="SDK\CalcValueDamageATKGlacier.cpp" />
+    <ClCompile Include="SDK\CalcWeaponExplosionDamage.cpp" />
+    <ClCompile Include="SDK\CalcWeaponInstantHitDamage.cpp" />
+    <ClCompile Include="SDK\CalcWeaponInstantHitDamage_PickupWeapon.cpp" />
+    <ClCompile Include="SDK\CalcWeaponInstantHitDamage_UltimateGleyRune.cpp" />
+    <ClCompile Include="SDK\CameraCalibrationCore.cpp" />
+    <ClCompile Include="SDK\CameraCalibrationCoreMovieScene.cpp" />
+    <ClCompile Include="SDK\CameraModifier_DeboneArrived.cpp" />
+    <ClCompile Include="SDK\CameraModifier_DeboneArrived_Hor.cpp" />
+    <ClCompile Include="SDK\CameraModifier_DeboneArrived_Vert.cpp" />
+    <ClCompile Include="SDK\CameraModifier_DeboneStart.cpp" />
+    <ClCompile Include="SDK\CAM_PC_Skill_AtkShake_03.cpp" />
+    <ClCompile Include="SDK\CAM_PC_Skill_AtkShake_08.cpp" />
+    <ClCompile Include="SDK\CAM_PC_Skill_AtkShake_11.cpp" />
+    <ClCompile Include="SDK\CAM_PC_Skill_AtkShake_12.cpp" />
+    <ClCompile Include="SDK\CAM_PC_Skill_AtkShake_13.cpp" />
+    <ClCompile Include="SDK\CAM_PC_Skill_AtkShake_14.cpp" />
+    <ClCompile Include="SDK\CAM_PC_Skill_AtkShake_15.cpp" />
+    <ClCompile Include="SDK\CAM_PC_Skill_AtkShake_19.cpp" />
+    <ClCompile Include="SDK\CAM_PC_Skill_HitShake_01.cpp" />
+    <ClCompile Include="SDK\CancelMove_BTTask.cpp" />
+    <ClCompile Include="SDK\Chaos.cpp" />
+    <ClCompile Include="SDK\ChaosSolverEngine.cpp" />
+    <ClCompile Include="SDK\CinematicCamera.cpp" />
+    <ClCompile Include="SDK\ClothingSystemRuntimeCommon.cpp" />
+    <ClCompile Include="SDK\ClothingSystemRuntimeInterface.cpp" />
+    <ClCompile Include="SDK\ClothingSystemRuntimeNv.cpp" />
+    <ClCompile Include="SDK\CL_CenterCircle.cpp" />
+    <ClCompile Include="SDK\CL_SurroundLines.cpp" />
+    <ClCompile Include="SDK\CL_SurroundTextures.cpp" />
+    <ClCompile Include="SDK\CommonHitPosition.cpp" />
+    <ClCompile Include="SDK\Composure.cpp" />
+    <ClCompile Include="SDK\ConsoleVariablesEditorRuntime.cpp" />
+    <ClCompile Include="SDK\Constraints.cpp" />
+    <ClCompile Include="SDK\ControlRig.cpp" />
+    <ClCompile Include="SDK\ControlRigSpline.cpp" />
+    <ClCompile Include="SDK\CoreOnline.cpp" />
+    <ClCompile Include="SDK\CoreUObject.cpp" />
+    <ClCompile Include="SDK\CustomMeshComponent.cpp" />
+    <ClCompile Include="SDK\DataflowCore.cpp" />
+    <ClCompile Include="SDK\DataflowEngine.cpp" />
+    <ClCompile Include="SDK\DataflowEnginePlugin.cpp" />
+    <ClCompile Include="SDK\DataflowNodes.cpp" />
+    <ClCompile Include="SDK\DatasmithContent.cpp" />
+    <ClCompile Include="SDK\DeathStalkerACCHpRatioValue.cpp" />
+    <ClCompile Include="SDK\DebonePartsWidgetComp.cpp" />
+    <ClCompile Include="SDK\Default_Fist.cpp" />
+    <ClCompile Include="SDK\DeveloperSettings.cpp" />
+    <ClCompile Include="SDK\DevourerACCHpRatioValue.cpp" />
+    <ClCompile Include="SDK\DLSS.cpp" />
+    <ClCompile Include="SDK\DLSSBlueprint.cpp" />
+    <ClCompile Include="SDK\DLSSMoviePipelineSupport.cpp" />
+    <ClCompile Include="SDK\DmgTypeBP_Environmental.cpp" />
+    <ClCompile Include="SDK\Engine.cpp" />
+    <ClCompile Include="SDK\EngineMessages.cpp" />
+    <ClCompile Include="SDK\EngineSettings.cpp" />
+    <ClCompile Include="SDK\EnvQueryContext_MainTarget.cpp" />
+    <ClCompile Include="SDK\EnvQueryContext_PrevQuerierLocation.cpp" />
+    <ClCompile Include="SDK\EnvQueryContext_PrimaryTarget.cpp" />
+    <ClCompile Include="SDK\EnzoRune03Value.cpp" />
+    <ClCompile Include="SDK\EnzoRune04Value.cpp" />
+    <ClCompile Include="SDK\EsiemoExplosionValue.cpp" />
+    <ClCompile Include="SDK\EsiemoStackValue.cpp" />
+    <ClCompile Include="SDK\EyeTracker.cpp" />
+    <ClCompile Include="SDK\FacialAnimation.cpp" />
+    <ClCompile Include="SDK\FFXFSR3Settings.cpp" />
+    <ClCompile Include="SDK\FieldInteractableExplosionCameraShake.cpp" />
+    <ClCompile Include="SDK\FieldObjectSpawner_CodedVault.cpp" />
+    <ClCompile Include="SDK\FieldSystemEngine.cpp" />
+    <ClCompile Include="SDK\Foliage.cpp" />
+    <ClCompile Include="SDK\FSR3MovieRenderPipeline.cpp" />
+    <ClCompile Include="SDK\FullBodyIK.cpp" />
+    <ClCompile Include="SDK\F_HC.cpp" />
+    <ClCompile Include="SDK\F_HC_1010.cpp" />
+    <ClCompile Include="SDK\F_SG.cpp" />
+    <ClCompile Include="SDK\F_SG_1002.cpp" />
+    <ClCompile Include="SDK\F_SMG.cpp" />
+    <ClCompile Include="SDK\F_SMG_1006.cpp" />
+    <ClCompile Include="SDK\GameplayCameras.cpp" />
+    <ClCompile Include="SDK\GameplayTags.cpp" />
+    <ClCompile Include="SDK\GameplayTasks.cpp" />
+    <ClCompile Include="SDK\Gauntlet.cpp" />
+    <ClCompile Include="SDK\GeometryCache.cpp" />
+    <ClCompile Include="SDK\GeometryCacheTracks.cpp" />
+    <ClCompile Include="SDK\GeometryCollectionEngine.cpp" />
+    <ClCompile Include="SDK\GeometryFramework.cpp" />
+    <ClCompile Include="SDK\GleyNosferatuCost.cpp" />
+    <ClCompile Include="SDK\Global.cpp" />
+    <ClCompile Include="SDK\GLTFExporter.cpp" />
+    <ClCompile Include="SDK\HaileyPassiveWeaknessStatIncrease.cpp" />
+    <ClCompile Include="SDK\HC.cpp" />
+    <ClCompile Include="SDK\HeadMountedDisplay.cpp" />
+    <ClCompile Include="SDK\HpRatioBased.cpp" />
+    <ClCompile Include="SDK\HttpNetworkReplayStreaming.cpp" />
+    <ClCompile Include="SDK\IK.cpp" />
+    <ClCompile Include="SDK\IKRig.cpp" />
+    <ClCompile Include="SDK\ImageWriteQueue.cpp" />
+    <ClCompile Include="SDK\ImgMedia.cpp" />
+    <ClCompile Include="SDK\ImgMediaEngine.cpp" />
+    <ClCompile Include="SDK\ImgMediaFactory.cpp" />
+    <ClCompile Include="SDK\InputCore.cpp" />
+    <ClCompile Include="SDK\InteractiveToolsFramework.cpp" />
+    <ClCompile Include="SDK\InventoryPreviewAnimBP.cpp" />
+    <ClCompile Include="SDK\IrisCore.cpp" />
+    <ClCompile Include="SDK\JsonUtilities.cpp" />
+    <ClCompile Include="SDK\KawaiiPhysics.cpp" />
+    <ClCompile Include="SDK\KyleCommonGaugeIncreaseByBarrier.cpp" />
+    <ClCompile Include="SDK\KyleCommonGaugeIncreaseByBarrierRune.cpp" />
+    <ClCompile Include="SDK\Landscape.cpp" />
+    <ClCompile Include="SDK\LevelSequence.cpp" />
+    <ClCompile Include="SDK\Level_PreviewActor_LevelInstance_4.cpp" />
+    <ClCompile Include="SDK\LinkedStatRatioBased.cpp" />
+    <ClCompile Include="SDK\LiveLink.cpp" />
+    <ClCompile Include="SDK\LiveLinkAnimationCore.cpp" />
+    <ClCompile Include="SDK\LiveLinkComponents.cpp" />
+    <ClCompile Include="SDK\LiveLinkInterface.cpp" />
+    <ClCompile Include="SDK\LiveLinkMessageBusFramework.cpp" />
+    <ClCompile Include="SDK\LiveLinkMovieScene.cpp" />
+    <ClCompile Include="SDK\LocalFileNetworkReplayStreaming.cpp" />
+    <ClCompile Include="SDK\LocationServicesBPLibrary.cpp" />
+    <ClCompile Include="SDK\Locomotion.cpp" />
+    <ClCompile Include="SDK\Locomotion_0HV_M.cpp" />
+    <ClCompile Include="SDK\Locomotion_0LT_F.cpp" />
+    <ClCompile Include="SDK\Locomotion_0LT_F_Bunny.cpp" />
+    <ClCompile Include="SDK\Locomotion_0LT_M.cpp" />
+    <ClCompile Include="SDK\Locomotion_2HV_F.cpp" />
+    <ClCompile Include="SDK\Locomotion_2HV_F_Bunny.cpp" />
+    <ClCompile Include="SDK\Locomotion_2HV_M.cpp" />
+    <ClCompile Include="SDK\Locomotion_2LT_F.cpp" />
+    <ClCompile Include="SDK\Locomotion_2LT_F_Bunny.cpp" />
+    <ClCompile Include="SDK\Locomotion_2LT_M.cpp" />
+    <ClCompile Include="SDK\LunaSkill2Value.cpp" />
+    <ClCompile Include="SDK\M1.cpp" />
+    <ClCompile Include="SDK\M1Actor.cpp" />
+    <ClCompile Include="SDK\M1AnimPhys.cpp" />
+    <ClCompile Include="SDK\M1AOECollisionManager.cpp" />
+    <ClCompile Include="SDK\M1Data.cpp" />
+    <ClCompile Include="SDK\M1DevFeedback.cpp" />
+    <ClCompile Include="SDK\M1EpicOnlineServices.cpp" />
+    <ClCompile Include="SDK\M1FaceMorph.cpp" />
+    <ClCompile Include="SDK\M1PlatformBridge.cpp" />
+    <ClCompile Include="SDK\M1PreLoadScreen.cpp" />
+    <ClCompile Include="SDK\M1PSO.cpp" />
+    <ClCompile Include="SDK\M1VivoxSettings.cpp" />
+    <ClCompile Include="SDK\Mag_AK_PC_Reload_State.cpp" />
+    <ClCompile Include="SDK\MAG_GetTargetActors.cpp" />
+    <ClCompile Include="SDK\Main.cpp" />
+    <ClCompile Include="SDK\MainForServer.cpp" />
+    <ClCompile Include="SDK\MaterialShaderQualitySettings.cpp" />
+    <ClCompile Include="SDK\MaxBerserkGaugeBased.cpp" />
+    <ClCompile Include="SDK\MaxCommonGaugeBased.cpp" />
+    <ClCompile Include="SDK\MaxEnergyShieldBasedIgnoreOverride.cpp" />
+    <ClCompile Include="SDK\MaxHpBased.cpp" />
+    <ClCompile Include="SDK\MaxHpBasedIgnoreOverride.cpp" />
+    <ClCompile Include="SDK\MaxHpBasedRuneCost.cpp" />
+    <ClCompile Include="SDK\MaxMpBased.cpp" />
+    <ClCompile Include="SDK\MediaAssets.cpp" />
+    <ClCompile Include="SDK\MediaCompositing.cpp" />
+    <ClCompile Include="SDK\MediaIOCore.cpp" />
+    <ClCompile Include="SDK\MediaPlate.cpp" />
+    <ClCompile Include="SDK\MediaUtils.cpp" />
+    <ClCompile Include="SDK\MeshDescription.cpp" />
+    <ClCompile Include="SDK\MetasoundEngine.cpp" />
+    <ClCompile Include="SDK\MetasoundFrontend.cpp" />
+    <ClCompile Include="SDK\MissionGraphRuntime.cpp" />
+    <ClCompile Include="SDK\MonsterAbilityActorInitializeStats.cpp" />
+    <ClCompile Include="SDK\MotionWarping.cpp" />
+    <ClCompile Include="SDK\MoviePlayer.cpp" />
+    <ClCompile Include="SDK\MovieRenderPipelineCore.cpp" />
+    <ClCompile Include="SDK\MovieRenderPipelineRenderPasses.cpp" />
+    <ClCompile Include="SDK\MovieRenderPipelineSettings.cpp" />
+    <ClCompile Include="SDK\MovieScene.cpp" />
+    <ClCompile Include="SDK\MovieSceneCapture.cpp" />
+    <ClCompile Include="SDK\MovieSceneTracks.cpp" />
+    <ClCompile Include="SDK\MRMesh.cpp" />
+    <ClCompile Include="SDK\MultiplyMoveSpeed.cpp" />
+    <ClCompile Include="SDK\NavigationSystem.cpp" />
+    <ClCompile Include="SDK\NetCore.cpp" />
+    <ClCompile Include="SDK\NexonPlatform.cpp" />
+    <ClCompile Include="SDK\Niagara.cpp" />
+    <ClCompile Include="SDK\NiagaraAnimNotifies.cpp" />
+    <ClCompile Include="SDK\NiagaraCore.cpp" />
+    <ClCompile Include="SDK\NiagaraShader.cpp" />
+    <ClCompile Include="SDK\NPC_002_MissionVeacon.cpp" />
+    <ClCompile Include="SDK\NPC_009_Jeffer_Barricade01A.cpp" />
+    <ClCompile Include="SDK\NPC_009_Jeffer_Barricade01B.cpp" />
+    <ClCompile Include="SDK\NPC_009_Jeffer_Checkpoint.cpp" />
+    <ClCompile Include="SDK\NPC_009_Jeffer_Idle.cpp" />
+    <ClCompile Include="SDK\NPC_015_Guide_Analyst.cpp" />
+    <ClCompile Include="SDK\NPC_019_Transportstorage.cpp" />
+    <ClCompile Include="SDK\NPC_033_Workbench.cpp" />
+    <ClCompile Include="SDK\NPC_034_TextJournal.cpp" />
+    <ClCompile Include="SDK\NPC_035_VoiceJournal.cpp" />
+    <ClCompile Include="SDK\NPC_048_A101_AnimBP.cpp" />
+    <ClCompile Include="SDK\NPC_048_No17.cpp" />
+    <ClCompile Include="SDK\NPC_AnimAKevent.cpp" />
+    <ClCompile Include="SDK\NPC_Enzo_Operate.cpp" />
+    <ClCompile Include="SDK\NPC_Enzo_Wisdom.cpp" />
+    <ClCompile Include="SDK\NPC_Esiemo.cpp" />
+    <ClCompile Include="SDK\NPC_Esiemo_Operate.cpp" />
+    <ClCompile Include="SDK\NPC_InstanceDungeon.cpp" />
+    <ClCompile Include="SDK\NPC_MultiSupply.cpp" />
+    <ClCompile Include="SDK\NXPWebBrowser.cpp" />
+    <ClCompile Include="SDK\NXPWebBrowserWidget.cpp" />
+    <ClCompile Include="SDK\OnlineSubsystem.cpp" />
+    <ClCompile Include="SDK\OnlineSubsystemSteam.cpp" />
+    <ClCompile Include="SDK\OnlineSubsystemUtils.cpp" />
+    <ClCompile Include="SDK\OodleNetworkHandlerComponent.cpp" />
+    <ClCompile Include="SDK\OpenColorIO.cpp" />
+    <ClCompile Include="SDK\Overlay.cpp" />
+    <ClCompile Include="SDK\OverrideDBNORescueTime.cpp" />
+    <ClCompile Include="SDK\OverrideNavWalkingSpeed.cpp" />
+    <ClCompile Include="SDK\PacketHandler.cpp" />
+    <ClCompile Include="SDK\Paper2D.cpp" />
+    <ClCompile Include="SDK\Param2Based.cpp" />
+    <ClCompile Include="SDK\ParamBased.cpp" />
+    <ClCompile Include="SDK\ParamBased_SetOption_CommonGauge.cpp" />
+    <ClCompile Include="SDK\PBIK.cpp" />
+    <ClCompile Include="SDK\PcFootStepState.cpp" />
+    <ClCompile Include="SDK\PC_AR_Shake.cpp" />
+    <ClCompile Include="SDK\PC_AR_Shake_4.cpp" />
+    <ClCompile Include="SDK\PC_BeHit_Normal_shake.cpp" />
+    <ClCompile Include="SDK\PC_BeHit_Shake.cpp" />
+    <ClCompile Include="SDK\PC_Dash_Shake.cpp" />
+    <ClCompile Include="SDK\PC_HangOn_Attack_Shake.cpp" />
+    <ClCompile Include="SDK\PC_HC_Shake.cpp" />
+    <ClCompile Include="SDK\PC_JumpAttack_Loop_Shake.cpp" />
+    <ClCompile Include="SDK\PC_JumpAttack_Shake.cpp" />
+    <ClCompile Include="SDK\PC_Jump_Landing_Shake.cpp" />
+    <ClCompile Include="SDK\PC_MG_Shake.cpp" />
+    <ClCompile Include="SDK\PC_SG_Shake.cpp" />
+    <ClCompile Include="SDK\PC_Slide_Shake.cpp" />
+    <ClCompile Include="SDK\PC_SMG_Shake.cpp" />
+    <ClCompile Include="SDK\PC_SR_Shake.cpp" />
+    <ClCompile Include="SDK\PC_Subskill_Hard_JumpAttack.cpp" />
+    <ClCompile Include="SDK\PC_Subskill_Hard_leftToRight.cpp" />
+    <ClCompile Include="SDK\PC_Subskill_Hard_LeftupToRightdown.cpp" />
+    <ClCompile Include="SDK\PC_Subskill_Hard_RightuptoLeftdown.cpp" />
+    <ClCompile Include="SDK\PC_Subskill_normal_BackToFront.cpp" />
+    <ClCompile Include="SDK\PC_Subskill_normal_LeftToRight.cpp" />
+    <ClCompile Include="SDK\PC_Subskill_normal_RightToLeft.cpp" />
+    <ClCompile Include="SDK\PC_Subskill_normal_RightToLeftup.cpp" />
+    <ClCompile Include="SDK\PC_Wire_Shake_.cpp" />
+    <ClCompile Include="SDK\PerkAbilityBase.cpp" />
+    <ClCompile Include="SDK\PerkAbility_2_ThunderCage.cpp" />
+    <ClCompile Include="SDK\PhysicsCore.cpp" />
+    <ClCompile Include="SDK\PlayerBase.cpp" />
+    <ClCompile Include="SDK\ProceduralMeshComponent.cpp" />
+    <ClCompile Include="SDK\PROJ_AcolyteRangeAttack.cpp" />
+    <ClCompile Include="SDK\PROJ_AsceticGunfire.cpp" />
+    <ClCompile Include="SDK\PROJ_BlazerGunfire.cpp" />
+    <ClCompile Include="SDK\PROJ_DevoteeGunfire.cpp" />
+    <ClCompile Include="SDK\PROJ_GazerGunfire.cpp" />
+    <ClCompile Include="SDK\PROJ_MonsterGunfire.cpp" />
+    <ClCompile Include="SDK\PROJ_PotbellyGunfire.cpp" />
+    <ClCompile Include="SDK\PROJ_WardenGunfire.cpp" />
+    <ClCompile Include="SDK\PropertyPath.cpp" />
+    <ClCompile Include="SDK\RadiusVisualizeBall.cpp" />
+    <ClCompile Include="SDK\RangedWeapon__HC__HC_1010.cpp" />
+    <ClCompile Include="SDK\RangedWeapon__SG__SG_1002.cpp" />
+    <ClCompile Include="SDK\RangedWeapon__SMG__SMG_1006.cpp" />
+    <ClCompile Include="SDK\ReactorAbilityBase.cpp" />
+    <ClCompile Include="SDK\ReactorAbility_SkilllAttackPower.cpp" />
+    <ClCompile Include="SDK\Renderer.cpp" />
+    <ClCompile Include="SDK\ReplicationGraph.cpp" />
+    <ClCompile Include="SDK\RichTextBlockDecoratorBase.cpp" />
+    <ClCompile Include="SDK\RichTextBlockDecoratorBase_SE.cpp" />
+    <ClCompile Include="SDK\RichTextBlockLinkDecorator.cpp" />
+    <ClCompile Include="SDK\RigVM.cpp" />
+    <ClCompile Include="SDK\RW_HC_1009_AnimBP.cpp" />
+    <ClCompile Include="SDK\RW_LNC_1001_AnimBP.cpp" />
+    <ClCompile Include="SDK\RW_SG_1001_A001_AnimBP.cpp" />
+    <ClCompile Include="SDK\RW_SMG_1005_AnimBP.cpp" />
+    <ClCompile Include="SDK\SequencerScripting.cpp" />
+    <ClCompile Include="SDK\Serialization.cpp" />
+    <ClCompile Include="SDK\SessionMessages.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_DecreaseCommonGaugeByPassive.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_GaugeDeltaBase.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_GaugeDeltaByDisplacement.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_GaugeDeltaByMaxRatio.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_GaugeDeltaByValue.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_IncreaseCommonGaugeBase.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_IncreaseCommonGaugeByJoyride.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_IncreaseCommonGaugeByPassive.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_Pulsar.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_Shock.cpp" />
+    <ClCompile Include="SDK\SE_Bunny_TickCostByValue.cpp" />
+    <ClCompile Include="SDK\SE_UltimateBunny_DecreaseCommonGaugeByPassive.cpp" />
+    <ClCompile Include="SDK\SE_UltimateBunny_IncreaseCommonGaugeByJoyride.cpp" />
+    <ClCompile Include="SDK\SE_UltimateBunny_IncreaseCommonGaugeByPassive.cpp" />
+    <ClCompile Include="SDK\SE_UltimateBunny_Pulsar.cpp" />
+    <ClCompile Include="SDK\SG.cpp" />
+    <ClCompile Include="SDK\SharenRune02Value.cpp" />
+    <ClCompile Include="SDK\ShieldInitializeStats.cpp" />
+    <ClCompile Include="SDK\SignificanceManager.cpp" />
+    <ClCompile Include="SDK\SimpleStatusEffect_VFXPlay.cpp" />
+    <ClCompile Include="SDK\SkillAbility_BeamBase.cpp" />
+    <ClCompile Include="SDK\Skill_Bunny_Active01.cpp" />
+    <ClCompile Include="SDK\Skill_Bunny_Active02.cpp" />
+    <ClCompile Include="SDK\Skill_Bunny_Active03.cpp" />
+    <ClCompile Include="SDK\Skill_Bunny_Active04.cpp" />
+    <ClCompile Include="SDK\Skill_Bunny_Passive.cpp" />
+    <ClCompile Include="SDK\Skill_Bunny_Rune06_Active03.cpp" />
+    <ClCompile Include="SDK\Skill_Climb.cpp" />
+    <ClCompile Include="SDK\Skill_Ecive.cpp" />
+    <ClCompile Include="SDK\Skill_Evade.cpp" />
+    <ClCompile Include="SDK\Skill_UltimateBunny_Active01.cpp" />
+    <ClCompile Include="SDK\Skill_UltimateBunny_Active02.cpp" />
+    <ClCompile Include="SDK\Skill_UltimateBunny_Active03.cpp" />
+    <ClCompile Include="SDK\Skill_UltimateBunny_Active04.cpp" />
+    <ClCompile Include="SDK\Skill_UltimateBunny_Passive.cpp" />
+    <ClCompile Include="SDK\Skill_Vault.cpp" />
+    <ClCompile Include="SDK\Skill_Wire.cpp" />
+    <ClCompile Include="SDK\Slate.cpp" />
+    <ClCompile Include="SDK\SlateCore.cpp" />
+    <ClCompile Include="SDK\Slot_0HV.cpp" />
+    <ClCompile Include="SDK\Slot_0LT.cpp" />
+    <ClCompile Include="SDK\Slot_1HV.cpp" />
+    <ClCompile Include="SDK\Slot_2HV.cpp" />
+    <ClCompile Include="SDK\Slot_2LT.cpp" />
+    <ClCompile Include="SDK\SMG.cpp" />
+    <ClCompile Include="SDK\SoundFields.cpp" />
+    <ClCompile Include="SDK\Specification.cpp" />
+    <ClCompile Include="SDK\Spica.cpp" />
+    <ClCompile Include="SDK\StatBased.cpp" />
+    <ClCompile Include="SDK\StatBasedIgnoreOverride.cpp" />
+    <ClCompile Include="SDK\StaticMeshDescription.cpp" />
+    <ClCompile Include="SDK\StatusEffect_Knockback.cpp" />
+    <ClCompile Include="SDK\StatusEffect_KnockBase.cpp" />
+    <ClCompile Include="SDK\StatusEffect_WireHitStop.cpp" />
+    <ClCompile Include="SDK\StreamlineBlueprint.cpp" />
+    <ClCompile Include="SDK\StreamlineDeepDVCBlueprint.cpp" />
+    <ClCompile Include="SDK\StreamlineRHI.cpp" />
+    <ClCompile Include="SDK\SubSkillAnimSetting.cpp" />
+    <ClCompile Include="SDK\SubSkillCollision.cpp" />
+    <ClCompile Include="SDK\SubSkillCollisionShapeType.cpp" />
+    <ClCompile Include="SDK\SubSkillSetting.cpp" />
+    <ClCompile Include="SDK\SumNormalATKStat.cpp" />
+    <ClCompile Include="SDK\Synthesis.cpp" />
+    <ClCompile Include="SDK\TakeMovieScene.cpp" />
+    <ClCompile Include="SDK\TcpMessaging.cpp" />
+    <ClCompile Include="SDK\TemplateSequence.cpp" />
+    <ClCompile Include="SDK\TimeManagement.cpp" />
+    <ClCompile Include="SDK\TraceUtilities.cpp" />
+    <ClCompile Include="SDK\TypedElementFramework.cpp" />
+    <ClCompile Include="SDK\TypedElementRuntime.cpp" />
+    <ClCompile Include="SDK\UdpMessaging.cpp" />
+    <ClCompile Include="SDK\UI_AboveMainButUnderStandaloneLayer.cpp" />
+    <ClCompile Include="SDK\UI_ActionIcon.cpp" />
+    <ClCompile Include="SDK\UI_ActionIconBase.cpp" />
+    <ClCompile Include="SDK\UI_ActionIcon_Stack.cpp" />
+    <ClCompile Include="SDK\UI_ActorWidgetLayer.cpp" />
+    <ClCompile Include="SDK\UI_ActorWidget_Portal.cpp" />
+    <ClCompile Include="SDK\UI_AkCheat.cpp" />
+    <ClCompile Include="SDK\UI_Announce.cpp" />
+    <ClCompile Include="SDK\UI_Announce_General.cpp" />
+    <ClCompile Include="SDK\UI_BossMonsterTimer.cpp" />
+    <ClCompile Include="SDK\UI_Button_13.cpp" />
+    <ClCompile Include="SDK\UI_Button_Deco_Default1.cpp" />
+    <ClCompile Include="SDK\UI_Button_Deco_Default2.cpp" />
+    <ClCompile Include="SDK\UI_Button_Deco_Default_Dpad1_Deco.cpp" />
+    <ClCompile Include="SDK\UI_Button_Deco_Select.cpp" />
+    <ClCompile Include="SDK\UI_Button_Tooltip_Default_A.cpp" />
+    <ClCompile Include="SDK\UI_Button_Tooltip_PlayerName.cpp" />
+    <ClCompile Include="SDK\UI_Challenge_Complete.cpp" />
+    <ClCompile Include="SDK\UI_CharacterIcon_Default.cpp" />
+    <ClCompile Include="SDK\UI_Chatting.cpp" />
+    <ClCompile Include="SDK\UI_ChattingItem.cpp" />
+    <ClCompile Include="SDK\UI_Chatting_Layer.cpp" />
+    <ClCompile Include="SDK\UI_Chat_Button.cpp" />
+    <ClCompile Include="SDK\UI_Codex_Tracking.cpp" />
+    <ClCompile Include="SDK\UI_Codex_Tracking_Task.cpp" />
+    <ClCompile Include="SDK\UI_Codex_Tracking_Task_Item.cpp" />
+    <ClCompile Include="SDK\UI_Color_RGB.cpp" />
+    <ClCompile Include="SDK\UI_Common_Fx_01.cpp" />
+    <ClCompile Include="SDK\UI_Common_Fx_02.cpp" />
+    <ClCompile Include="SDK\UI_Common_Fx_Immune.cpp" />
+    <ClCompile Include="SDK\UI_Component_UnlockCondition_A.cpp" />
+    <ClCompile Include="SDK\UI_Component_UnlockCondition_V01.cpp" />
+    <ClCompile Include="SDK\UI_ConsumableItemDetails.cpp" />
+    <ClCompile Include="SDK\UI_ConsumableItemResearchInfo.cpp" />
+    <ClCompile Include="SDK\UI_ContextButtons.cpp" />
+    <ClCompile Include="SDK\UI_ContextButtons_Tooltip.cpp" />
+    <ClCompile Include="SDK\UI_Craft_Icon.cpp" />
+    <ClCompile Include="SDK\UI_CreatorIcon.cpp" />
+    <ClCompile Include="SDK\UI_Crosshair_001.cpp" />
+    <ClCompile Include="SDK\UI_Crosshair_003_Middle.cpp" />
+    <ClCompile Include="SDK\UI_Crosshair_009.cpp" />
+    <ClCompile Include="SDK\UI_Currencies.cpp" />
+    <ClCompile Include="SDK\UI_Currency.cpp" />
+    <ClCompile Include="SDK\UI_CursorFocusDeco.cpp" />
+    <ClCompile Include="SDK\UI_CursorFocusDecoContent.cpp" />
+    <ClCompile Include="SDK\UI_Customize_ItemDetails.cpp" />
+    <ClCompile Include="SDK\UI_Customize_SkinDetails.cpp" />
+    <ClCompile Include="SDK\UI_DamageTrackingIconLayer.cpp" />
+    <ClCompile Include="SDK\UI_Damage_Effect.cpp" />
+    <ClCompile Include="SDK\UI_Decoration_SocialMotionDetails.cpp" />
+    <ClCompile Include="SDK\UI_Deco_Back_001.cpp" />
+    <ClCompile Include="SDK\UI_Deco_Back_002.cpp" />
+    <ClCompile Include="SDK\UI_Deco_Back_Title.cpp" />
+    <ClCompile Include="SDK\UI_Deco_Cube_01.cpp" />
+    <ClCompile Include="SDK\UI_Deco_Cube_02.cpp" />
+    <ClCompile Include="SDK\UI_Deco_Cube_03.cpp" />
+    <ClCompile Include="SDK\UI_Deco_Cube_Line_01.cpp" />
+    <ClCompile Include="SDK\UI_Deco_Flicker.cpp" />
+    <ClCompile Include="SDK\UI_Deco_TitleLine_01.cpp" />
+    <ClCompile Include="SDK\UI_Deco_TitleLine_04.cpp" />
+    <ClCompile Include="SDK\UI_Deco_TitleLine_04_Hor.cpp" />
+    <ClCompile Include="SDK\UI_Deco_TitleLine_05.cpp" />
+    <ClCompile Include="SDK\UI_Deco_TitleLine_08_Hor.cpp" />
+    <ClCompile Include="SDK\UI_Details_RuneCondition.cpp" />
+    <ClCompile Include="SDK\UI_Dialog.cpp" />
+    <ClCompile Include="SDK\UI_DialogPanel.cpp" />
+    <ClCompile Include="SDK\UI_DraggedItemIcon.cpp" />
+    <ClCompile Include="SDK\UI_Drop_Marker.cpp" />
+    <ClCompile Include="SDK\UI_EliteSkillIcon.cpp" />
+    <ClCompile Include="SDK\UI_EpicBoss.cpp" />
+    <ClCompile Include="SDK\UI_EpicBossDetailsItem.cpp" />
+    <ClCompile Include="SDK\UI_EpicBossIconItem.cpp" />
+    <ClCompile Include="SDK\UI_EquipmentItemDetails.cpp" />
+    <ClCompile Include="SDK\UI_Favorite_List.cpp" />
+    <ClCompile Include="SDK\UI_FieldContents_Fail.cpp" />
+    <ClCompile Include="SDK\UI_FieldContents_Start.cpp" />
+    <ClCompile Include="SDK\UI_FieldContents_Success.cpp" />
+    <ClCompile Include="SDK\UI_FieldInteractableInfo.cpp" />
+    <ClCompile Include="SDK\UI_FlipbookImage.cpp" />
+    <ClCompile Include="SDK\UI_FloaterWidget.cpp" />
+    <ClCompile Include="SDK\UI_Game.cpp" />
+    <ClCompile Include="SDK\UI_GameBottom_PlayerInfo.cpp" />
+    <ClCompile Include="SDK\UI_GameBottom_Skills.cpp" />
+    <ClCompile Include="SDK\UI_GameBottom_Weapon.cpp" />
+    <ClCompile Include="SDK\UI_GameBottom_WeaponInfo.cpp" />
+    <ClCompile Include="SDK\UI_GameBottom_WeaponInfo_GainAmmo.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_Crosshair.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_Crosshair_WireGuide_Type1.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_Crosshair_WireGuide_Type2.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_Crosshair_WireGuide_Type3.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_Crosshair_WireGuide_Type4.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_DamegeIndicator_Arrow.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_DamegeIndicator_Arrow1.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_Distance.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_Fade.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_Floater.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_HitMark.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_PerkCustom.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_RoundsInfo.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_SkillCustom.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_Warning.cpp" />
+    <ClCompile Include="SDK\UI_GameCenter_WeaponCharge.cpp" />
+    <ClCompile Include="SDK\UI_GameDevStatus.cpp" />
+    <ClCompile Include="SDK\UI_GameGuide_GainItem.cpp" />
+    <ClCompile Include="SDK\UI_GameGuide_GainItem_mini.cpp" />
+    <ClCompile Include="SDK\UI_GameGuide_Gain_Mini.cpp" />
+    <ClCompile Include="SDK\UI_GameHP_Boss.cpp" />
+    <ClCompile Include="SDK\UI_GameHP_Boss_Phase.cpp" />
+    <ClCompile Include="SDK\UI_GameHP_Debone.cpp" />
+    <ClCompile Include="SDK\UI_GameHP_Named.cpp" />
+    <ClCompile Include="SDK\UI_GameHP_Named_Phase.cpp" />
+    <ClCompile Include="SDK\UI_GameHP_Parts.cpp" />
+    <ClCompile Include="SDK\UI_GameHP_Player.cpp" />
+    <ClCompile Include="SDK\UI_GameHP_Target.cpp" />
+    <ClCompile Include="SDK\UI_GameObjectvieInfoList.cpp" />
+    <ClCompile Include="SDK\UI_GameObjectvieInfoPanel.cpp" />
+    <ClCompile Include="SDK\UI_GamePlayerInfoList.cpp" />
+    <ClCompile Include="SDK\UI_GamePlayerInfoListItem.cpp" />
+    <ClCompile Include="SDK\UI_GameTop.cpp" />
+    <ClCompile Include="SDK\UI_GameTop_CustomizeEvolutionUnlock.cpp" />
+    <ClCompile Include="SDK\UI_GameTop_LevelUp.cpp" />
+    <ClCompile Include="SDK\UI_GameTop_LevelUp_SkillIcon.cpp" />
+    <ClCompile Include="SDK\UI_GameTop_LevelUp_SkillStat.cpp" />
+    <ClCompile Include="SDK\UI_GameTop_Levelup_Stat.cpp" />
+    <ClCompile Include="SDK\UI_GameTop_MasteryRank_LevelUp_Possible.cpp" />
+    <ClCompile Include="SDK\UI_Game_AllyNavigation.cpp" />
+    <ClCompile Include="SDK\UI_Game_AllyNavigation_PlayerIcon.cpp" />
+    <ClCompile Include="SDK\UI_Game_Bottom_Cha_DF.cpp" />
+    <ClCompile Include="SDK\UI_Game_Bottom_Cha_Heal.cpp" />
+    <ClCompile Include="SDK\UI_Game_CharLevel.cpp" />
+    <ClCompile Include="SDK\UI_Game_DbnoIcon.cpp" />
+    <ClCompile Include="SDK\UI_Game_DeathCount.cpp" />
+    <ClCompile Include="SDK\UI_Game_ForcedExitTime.cpp" />
+    <ClCompile Include="SDK\UI_Game_InstanceDungeonScore.cpp" />
+    <ClCompile Include="SDK\UI_Game_InstanceDungeonScore_Item.cpp" />
+    <ClCompile Include="SDK\UI_Game_InvasionDungeon_TimeAttack.cpp" />
+    <ClCompile Include="SDK\UI_Game_Player_Buff.cpp" />
+    <ClCompile Include="SDK\UI_Game_Radar.cpp" />
+    <ClCompile Include="SDK\UI_Game_Radar_ani.cpp" />
+    <ClCompile Include="SDK\UI_Game_Radar_Icon.cpp" />
+    <ClCompile Include="SDK\UI_Game_Radar_Layer.cpp" />
+    <ClCompile Include="SDK\UI_Game_Radar_Step01.cpp" />
+    <ClCompile Include="SDK\UI_Game_Radar_Step02.cpp" />
+    <ClCompile Include="SDK\UI_Game_Radar_Step03.cpp" />
+    <ClCompile Include="SDK\UI_Game_WarningNoti.cpp" />
+    <ClCompile Include="SDK\UI_GuideMessage.cpp" />
+    <ClCompile Include="SDK\UI_GuideMessageLayer.cpp" />
+    <ClCompile Include="SDK\UI_GuideMessage_Meta.cpp" />
+    <ClCompile Include="SDK\UI_GuidePanel.cpp" />
+    <ClCompile Include="SDK\UI_Guide_Respawn.cpp" />
+    <ClCompile Include="SDK\UI_Icon_Spinner_03.cpp" />
+    <ClCompile Include="SDK\UI_InclusiveCustomizeDetails.cpp" />
+    <ClCompile Include="SDK\UI_InclusiveItemDetails.cpp" />
+    <ClCompile Include="SDK\UI_InstanceDungeon_ScoreBar.cpp" />
+    <ClCompile Include="SDK\UI_InteractionObject_Marker.cpp" />
+    <ClCompile Include="SDK\UI_InvasionDungeon_ScoreBar.cpp" />
+    <ClCompile Include="SDK\UI_InvasionDungeon_TimeAttackIcon_Item.cpp" />
+    <ClCompile Include="SDK\UI_InvasionDungeon_Timer.cpp" />
+    <ClCompile Include="SDK\UI_ItemContentsInfo.cpp" />
+    <ClCompile Include="SDK\UI_ItemCoreStat.cpp" />
+    <ClCompile Include="SDK\UI_ItemExp.cpp" />
+    <ClCompile Include="SDK\UI_ItemIcon.cpp" />
+    <ClCompile Include="SDK\UI_ItemIconButton.cpp" />
+    <ClCompile Include="SDK\UI_ItemIconOnly.cpp" />
+    <ClCompile Include="SDK\UI_ItemIconOnly_Rune.cpp" />
+    <ClCompile Include="SDK\UI_ItemIcon_Perk.cpp" />
+    <ClCompile Include="SDK\UI_ItemIcon_Perk_Node.cpp" />
+    <ClCompile Include="SDK\UI_ItemIcon_RandomOption.cpp" />
+    <ClCompile Include="SDK\UI_ItemIcon_RandomOption_Node.cpp" />
+    <ClCompile Include="SDK\UI_ItemIcon_Reactor.cpp" />
+    <ClCompile Include="SDK\UI_ItemIcon_Reactor_Node.cpp" />
+    <ClCompile Include="SDK\UI_ItemList.cpp" />
+    <ClCompile Include="SDK\UI_ItemOptionInfo.cpp" />
+    <ClCompile Include="SDK\UI_ItemOptionStat.cpp" />
+    <ClCompile Include="SDK\UI_ItemResource1.cpp" />
+    <ClCompile Include="SDK\UI_ItemResource1_Name.cpp" />
+    <ClCompile Include="SDK\UI_ItemSet.cpp" />
+    <ClCompile Include="SDK\UI_ItemSet_Slot.cpp" />
+    <ClCompile Include="SDK\UI_ItemSet_Stat.cpp" />
+    <ClCompile Include="SDK\UI_ItemStatInfo.cpp" />
+    <ClCompile Include="SDK\UI_ItemStat_A.cpp" />
+    <ClCompile Include="SDK\UI_ItemWeaponStatInfo.cpp" />
+    <ClCompile Include="SDK\UI_ItemWithProbability.cpp" />
+    <ClCompile Include="SDK\UI_KeyButton.cpp" />
+    <ClCompile Include="SDK\UI_KeyButton01.cpp" />
+    <ClCompile Include="SDK\UI_KeyButton_Chatting.cpp" />
+    <ClCompile Include="SDK\UI_KeyButton_HUD.cpp" />
+    <ClCompile Include="SDK\UI_KeyButton_Symbol.cpp" />
+    <ClCompile Include="SDK\UI_KeyButton_Symbol1.cpp" />
+    <ClCompile Include="SDK\UI_KeySymbol_01.cpp" />
+    <ClCompile Include="SDK\UI_KeySymbol_02.cpp" />
+    <ClCompile Include="SDK\UI_KeySymbol_Dual.cpp" />
+    <ClCompile Include="SDK\UI_KeySymbol_Support.cpp" />
+    <ClCompile Include="SDK\UI_LocalMap_Door.cpp" />
+    <ClCompile Include="SDK\UI_LocalMap_Mission_Difficulty_Item.cpp" />
+    <ClCompile Include="SDK\UI_MailboxNpcIcon.cpp" />
+    <ClCompile Include="SDK\UI_Mana_CustomGuages.cpp" />
+    <ClCompile Include="SDK\UI_MapBattleZoneUnlockNoti.cpp" />
+    <ClCompile Include="SDK\UI_MapFieldUnlockNoti.cpp" />
+    <ClCompile Include="SDK\UI_MasteryRankIcon.cpp" />
+    <ClCompile Include="SDK\UI_Matching_TextItem.cpp" />
+    <ClCompile Include="SDK\UI_MissionIconImage.cpp" />
+    <ClCompile Include="SDK\UI_MissionNpcHeadUpInfo.cpp" />
+    <ClCompile Include="SDK\UI_MissionResult.cpp" />
+    <ClCompile Include="SDK\UI_MissionSubTypeInfo_VoidFragment.cpp" />
+    <ClCompile Include="SDK\UI_MissionSubTypeInfo_VoidFusion.cpp" />
+    <ClCompile Include="SDK\UI_MissionTargetActorInfo_Immune.cpp" />
+    <ClCompile Include="SDK\UI_MissionTargetActorInfo_VoidFragment.cpp" />
+    <ClCompile Include="SDK\UI_MissionUnlockNoti.cpp" />
+    <ClCompile Include="SDK\UI_MissionWave_Guide.cpp" />
+    <ClCompile Include="SDK\UI_MissionWave_ReceivedRewards.cpp" />
+    <ClCompile Include="SDK\UI_MissionWave_Reward_Items.cpp" />
+    <ClCompile Include="SDK\UI_MissionWave_Start.cpp" />
+    <ClCompile Include="SDK\UI_Mission_CheckPointTime.cpp" />
+    <ClCompile Include="SDK\UI_Mission_CheckPointTime_Item.cpp" />
+    <ClCompile Include="SDK\UI_Mission_EliteAbilityDetails_Item.cpp" />
+    <ClCompile Include="SDK\UI_Mission_EliteAbilityDetails_Items.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Fail.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Guide.cpp" />
+    <ClCompile Include="SDK\UI_Mission_GuideMarker_Default.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Marker_Mission.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Marker_Move.cpp" />
+    <ClCompile Include="SDK\UI_Mission_MonsterGroup.cpp" />
+    <ClCompile Include="SDK\UI_Mission_NeutralityPlayerList_Item.cpp" />
+    <ClCompile Include="SDK\UI_Mission_NeutralityPlayerList_Items.cpp" />
+    <ClCompile Include="SDK\UI_Mission_OutOfArea.cpp" />
+    <ClCompile Include="SDK\UI_Mission_PlayerList_Item.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Result_Anim_Reward_Item.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Result_ExpValueNotice.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Result_MasterRankProgress.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Result_Reward_Items.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Result_ScoreDetails.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Result_ScoreStat.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Result_Slot_Item.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Result_StatItem.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Result_Stats.cpp" />
+    <ClCompile Include="SDK\UI_Mission_RevivalLimit.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Reward_Currency.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Reward_Items.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Reward_Item_Wide.cpp" />
+    <ClCompile Include="SDK\UI_Mission_SkillPropertyGroup.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Start.cpp" />
+    <ClCompile Include="SDK\UI_Mission_succes.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Collection.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_DataCollection_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Default_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Defense.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_DefenseStraight.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Defense_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Destruction.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_DestructionIronHeart_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Destruction_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Escort_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_FC_DestructionVulgus_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_FC_Goal_DestructionVulgus.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Goals.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Goals_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Goal_Hacking.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Goal_Invasion.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Goal_Steal.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Hacking_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Interaction.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Invasion_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_ListItem2_Invasion.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_MultiAssassination_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Occupation_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_ResearchBlocking.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Steal_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Supply.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_Supply_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_SurvivalStraight.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_TargetListItem2_Survival.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_TargetListItem_Defense.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_TargetListItem_Destruction_Single.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_TargetListItem_Supply_Single.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_TargetNameTag.cpp" />
+    <ClCompile Include="SDK\UI_Mission_Task_WaveDefense_HUDCenter.cpp" />
+    <ClCompile Include="SDK\UI_Mission_VoidBattle_Fail.cpp" />
+    <ClCompile Include="SDK\UI_Mission_VoidBattle_Succes.cpp" />
+    <ClCompile Include="SDK\UI_Mission_VoidPiece.cpp" />
+    <ClCompile Include="SDK\UI_Mission_VoidPiece_item.cpp" />
+    <ClCompile Include="SDK\UI_Mission_VoidVault_item.cpp" />
+    <ClCompile Include="SDK\UI_Mission_WorldDetails.cpp" />
+    <ClCompile Include="SDK\UI_Mission_World_WaveIconItem.cpp" />
+    <ClCompile Include="SDK\UI_Mission_World_WaveItem.cpp" />
+    <ClCompile Include="SDK\UI_Mission_World_WaveLineItem.cpp" />
+    <ClCompile Include="SDK\UI_Monster_Marker.cpp" />
+    <ClCompile Include="SDK\UI_MultiSupplier_Overhead.cpp" />
+    <ClCompile Include="SDK\UI_NamedProgressBar_Lerp.cpp" />
+    <ClCompile Include="SDK\UI_Notice_MtxItem.cpp" />
+    <ClCompile Include="SDK\UI_NPC_Interaction.cpp" />
+    <ClCompile Include="SDK\UI_NPC_NameTag.cpp" />
+    <ClCompile Include="SDK\UI_NPC_Overhead.cpp" />
+    <ClCompile Include="SDK\UI_NPC_OverheadInfo.cpp" />
+    <ClCompile Include="SDK\UI_NPC_Timer.cpp" />
+    <ClCompile Include="SDK\UI_Page_Rotation.cpp" />
+    <ClCompile Include="SDK\UI_Page_Rotation_Item.cpp" />
+    <ClCompile Include="SDK\UI_PerkList.cpp" />
+    <ClCompile Include="SDK\UI_PerkListItem.cpp" />
+    <ClCompile Include="SDK\UI_PhaseProgress.cpp" />
+    <ClCompile Include="SDK\UI_PlayerCustom_BunnyGauge.cpp" />
+    <ClCompile Include="SDK\UI_PlayerInteraction.cpp" />
+    <ClCompile Include="SDK\UI_Player_Overhaul.cpp" />
+    <ClCompile Include="SDK\UI_Popup.cpp" />
+    <ClCompile Include="SDK\UI_PopupContentDefault.cpp" />
+    <ClCompile Include="SDK\UI_PopupTitleBG.cpp" />
+    <ClCompile Include="SDK\UI_PreLoadingScreen.cpp" />
+    <ClCompile Include="SDK\UI_Progress.cpp" />
+    <ClCompile Include="SDK\UI_ProgressBar_Lerp.cpp" />
+    <ClCompile Include="SDK\UI_Quest_Marker.cpp" />
+    <ClCompile Include="SDK\UI_Quest_Task.cpp" />
+    <ClCompile Include="SDK\UI_Quest_Task_Description.cpp" />
+    <ClCompile Include="SDK\UI_ReactorInfo.cpp" />
+    <ClCompile Include="SDK\UI_ReloadMark.cpp" />
+    <ClCompile Include="SDK\UI_RuneDetails.cpp" />
+    <ClCompile Include="SDK\UI_RuneEnchant_Icon.cpp" />
+    <ClCompile Include="SDK\UI_Rune_Exclusive_Character.cpp" />
+    <ClCompile Include="SDK\UI_Season_Levelup.cpp" />
+    <ClCompile Include="SDK\UI_SimpleItemDetails.cpp" />
+    <ClCompile Include="SDK\UI_SimpleMissionItem.cpp" />
+    <ClCompile Include="SDK\UI_SkillCustomHUD_BunnyActive4.cpp" />
+    <ClCompile Include="SDK\UI_SkillCustomHUD_BunnyActive4_Item.cpp" />
+    <ClCompile Include="SDK\UI_SkillIcon.cpp" />
+    <ClCompile Include="SDK\UI_SkillIconCustom_BunnyPassive.cpp" />
+    <ClCompile Include="SDK\UI_SkillIconCustom_SubSkill.cpp" />
+    <ClCompile Include="SDK\UI_SkillIconEffect.cpp" />
+    <ClCompile Include="SDK\UI_SkillLevel.cpp" />
+    <ClCompile Include="SDK\UI_SkillPowerDetail.cpp" />
+    <ClCompile Include="SDK\UI_SkipPanel.cpp" />
+    <ClCompile Include="SDK\UI_SlotIcon_Equip.cpp" />
+    <ClCompile Include="SDK\UI_Social_Platform_Icon.cpp" />
+    <ClCompile Include="SDK\UI_SquadItem.cpp" />
+    <ClCompile Include="SDK\UI_SquareHighlight.cpp" />
+    <ClCompile Include="SDK\UI_StatusEffectIcon.cpp" />
+    <ClCompile Include="SDK\UI_StatusEffectIcons.cpp" />
+    <ClCompile Include="SDK\UI_StatusEffectIcons_Center.cpp" />
+    <ClCompile Include="SDK\UI_StatusEffect_Notice.cpp" />
+    <ClCompile Include="SDK\UI_StatusEffect_NoticePanel.cpp" />
+    <ClCompile Include="SDK\UI_SubSkillIcon.cpp" />
+    <ClCompile Include="SDK\UI_Tag_ArcheType.cpp" />
+    <ClCompile Include="SDK\UI_Tag_ElementalType.cpp" />
+    <ClCompile Include="SDK\UI_Tag_RoundsType.cpp" />
+    <ClCompile Include="SDK\UI_Timer.cpp" />
+    <ClCompile Include="SDK\UI_Timer_MissionOnly.cpp" />
+    <ClCompile Include="SDK\UI_Timer_TextOnly.cpp" />
+    <ClCompile Include="SDK\UI_ToastMessageLayer.cpp" />
+    <ClCompile Include="SDK\UI_ToastMessage_BottomLine.cpp" />
+    <ClCompile Include="SDK\UI_ToastMessage_BottomLineButton.cpp" />
+    <ClCompile Include="SDK\UI_ToastMessage_B_Crosshair.cpp" />
+    <ClCompile Include="SDK\UI_ToastMessage_CBot_SideItem.cpp" />
+    <ClCompile Include="SDK\UI_ToastMessage_MidLine.cpp" />
+    <ClCompile Include="SDK\UI_ToastMessage_RTop_Side.cpp" />
+    <ClCompile Include="SDK\UI_UpdateIcon.cpp" />
+    <ClCompile Include="SDK\UI_VideoGuideMessage.cpp" />
+    <ClCompile Include="SDK\UI_VoiceChatting.cpp" />
+    <ClCompile Include="SDK\UI_VoiceChatting_Slot.cpp" />
+    <ClCompile Include="SDK\UI_VoidVaultItemInfo.cpp" />
+    <ClCompile Include="SDK\UI_WaitingForNetwork.cpp" />
+    <ClCompile Include="SDK\UI_WidgetContainer.cpp" />
+    <ClCompile Include="SDK\UltimateBunny.cpp" />
+    <ClCompile Include="SDK\UMG.cpp" />
+    <ClCompile Include="SDK\UObjectPlugin.cpp" />
+    <ClCompile Include="SDK\UpperBody.cpp" />
+    <ClCompile Include="SDK\UpperBody__HC__HC_1010.cpp" />
+    <ClCompile Include="SDK\UpperBody__SG__SG_1002.cpp" />
+    <ClCompile Include="SDK\UpperBody__SMG__SMG_1006.cpp" />
+    <ClCompile Include="SDK\ValbyRune03Value.cpp" />
+    <ClCompile Include="SDK\VariantManagerContent.cpp" />
+    <ClCompile Include="SDK\VectorVM.cpp" />
+    <ClCompile Include="SDK\VivoxCore.cpp" />
+    <ClCompile Include="SDK\WaveTable.cpp" />
+    <ClCompile Include="SDK\WB_CrosshairBase.cpp" />
+    <ClCompile Include="SDK\WB_CrosshairLayerBase.cpp" />
+    <ClCompile Include="SDK\WB_CrosshairLayerBase_Circles.cpp" />
+    <ClCompile Include="SDK\WB_CrosshairLayerBase_Rectangles.cpp" />
+    <ClCompile Include="SDK\WC_AnimBP.cpp" />
+    <ClCompile Include="SDK\WC_BP.cpp" />
+    <ClCompile Include="SDK\WC_Hook_AnimBP.cpp" />
+    <ClCompile Include="SDK\WC_Hook_BP.cpp" />
+    <ClCompile Include="SDK\WinDualShock.cpp" />
+    <ClCompile Include="SDK\Wire.cpp" />
+    <ClCompile Include="SDK\WireDestPoint.cpp" />
+    <ClCompile Include="SDK\Wire_0HV_M.cpp" />
+    <ClCompile Include="SDK\Wire_0LT_F.cpp" />
+    <ClCompile Include="SDK\Wire_0LT_M.cpp" />
+    <ClCompile Include="SDK\Wire_2HV_F.cpp" />
+    <ClCompile Include="SDK\Wire_2HV_M.cpp" />
+    <ClCompile Include="SDK\Wire_2LT_F.cpp" />
+    <ClCompile Include="SDK\Wire_2LT_M.cpp" />
+    <ClCompile Include="SDK\WmfMediaFactory.cpp" />
+    <ClCompile Include="SDK\XeSSBlueprint.cpp" />
+    <ClCompile Include="SDK\XeSSPlugin.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
